@@ -6,10 +6,11 @@ Examples:
     2 - find_person(['stEVeN', 'Karol'], 'steven') should return 'stEVen'
     3 - find_person(['stEVeN', 'Karol'], 'StevEn') should return 'stEVen'
 """
-def find_person(persons,text_to_find):
-    for person in persons:
-        if person.lower() == text_to_find.lower():
+def find_person(list, text_to_find):
+    for person in list:
+        if person.lower() in text_to_find.lower():
             return person
+
 
 if __name__ == '__main__':
     print(find_person(['John', 'Smith'], 'john'))
