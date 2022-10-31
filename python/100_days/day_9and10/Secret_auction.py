@@ -10,13 +10,13 @@ stop_bidding = False
 
 def highest_bidder(bids):
     highest_bid = 0
-    h_bidder = ""
+    highest_bidder = ""
     for bidder in bids_dict:
         bidding_price = bids_dict[bidder]
         if bidding_price > highest_bid:
             highest_bid = bidding_price
-            h_bidder = bidder
-    print(f" highest bidding price is {highest_bid} bid by {h_bidder}")
+            highest_bidder = bidder
+    print(f" highest bidding price is {highest_bid} bid by {highest_bidder}")
 
 
 while not stop_bidding:
