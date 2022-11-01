@@ -18,7 +18,7 @@ Using `fetch()`
 
 const url = "https://jsonplaceholder.typicode.com/todos";
 const options = {
-  method: "POST",
+  method: "POST", // < -- difference
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json;charset=UTF-8",
@@ -53,3 +53,4 @@ axios
     console.log(data);
 });
 ```
+- Axios automatically does JSON data transformation, can set timeouts easily, can put interceptor on HTTP requests
