@@ -54,3 +54,10 @@ axios
 });
 ```
 - Axios automatically does JSON data transformation, can set timeouts easily, can put interceptor on HTTP requests
+
+### Virtual DOM
+- Rendering whole DOM tree is expensive on browser
+- React maintains a copy of tree in memory
+- Whenever there is a change to any object, react compares the copy and original dom tree
+- And only renders the part that changed
+- It achieves this by components and states associated with them
