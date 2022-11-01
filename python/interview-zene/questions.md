@@ -9,4 +9,47 @@
 - component is implemented as JS class that has a state and a render method
 - state contains the data that we want to display when the component is rendered
 - render method is responsible for describing what the UI should look like
-- 
+
+### Consuming API in react front end
+
+Using `fetch()`
+```javascript
+// Using fetch()
+
+const url = "https://jsonplaceholder.typicode.com/todos";
+const options = {
+  method: "POST",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json;charset=UTF-8",
+  },
+  body: JSON.stringify({
+    a: 10,
+    b: 20,
+  }),
+};
+fetch(url, options)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  });
+```
+
+Using `axios`
+```javascript
+const url = 'https://jsonplaceholder.typicode.com/posts'
+const data = {
+  a: 10,
+  b: 20,
+};
+axios
+  .post(url, data, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json;charset=UTF-8",
+    },
+  })
+  .then(({data}) => {
+    console.log(data);
+});
+```
